@@ -1,0 +1,91 @@
+@font-face{
+  font-family: 'SAOUI';
+  src: url('https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@bf_3.6.2_1/assets/SAOUI.ttf');
+  font-display: swap;
+}
+#div1 {
+    position: relative;/*必须，为了梯形定位*/
+    width: 341px;
+    height: 500px;
+    background: #ebe9ea;
+    margin-top: 100px;
+    border: 2px solid #877c7e;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 5px;
+}
+.trapezoidMaxLine {/*最外层梯形所在的div*/
+    position: absolute;/*相对于div1定位*/
+    /* background: #062343;/*设置成背景色，遮挡下边框*/ */
+    z-index: 4;
+    height: 27px;/*根据实际情况*/
+    width: 150px;/*根据实际情况*/
+    top: -29px;/*定位，根据实际情况*/
+    left: 8px;
+}
+/*重点来啦！！！最外层梯形代码在此*/
+.trapezoidMaxLine:before {
+    content: '';
+    position: absolute;/*相对于trapezoidMaxLine定位*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border: 2px solid #877c7e;
+    border-bottom: 0 solid #fff;
+    transform: perspective(6px) rotateX(3deg);
+}
+/*内层梯形所在的div，和最外层的一样，区别是定位参照物，和颜色位置*/
+.trapezoidMinLine {/*内层梯形所在的div*/
+    position: absolute;
+    z-index: 4;
+    height: 27px;
+    width: 148px;
+    top: 1px;
+    left: 1px;
+}
+.trapezoidMinLine:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #ebe9ea;
+    border: 1px solid #877c7e;
+    border-bottom: 0 solid #fff;
+    transform: perspective(6px) rotateX(3deg);
+  }
+  span.unitName.titleText {
+    font-family: 'SAOUI';
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgba(60, 60, 61,0.7)!important;
+    top: 10px;
+    position: absolute;
+    z-index: 5;
+    left: 30px;
+    width: 100%;
+  }
+  span.unitName.titleText i{
+    margin-right: 10px;
+  }
+  span.unitName.titleText::after{
+  display: block;
+  width: 90%;
+  margin-left: -10%;
+  margin-top: 2px;
+  height: 2px;
+  content: '';
+  background: rgba(160, 159, 160,0.9);
+  border-radius: 5px;
+}
+#userVisitEchart{
+  background: #fff;
+  height: 90%;
+  width: 90%;
+  margin: 5% 5%;
+}

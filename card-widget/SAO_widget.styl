@@ -1,0 +1,78 @@
+.card-widget:not(.card-info)
+  overflow visible !important
+  margin-bottom 45px!important
+  border-bottom-left-radius 10px!important
+  border-bottom-right-radius 10px!important
+  border-top-right-radius 10px!important
+  border-top-left-radius 0px!important
+  font-family 'SAOUI'!important
+  color rgba(60, 60, 61,0.7)!important
+  font-weight bold
+.card-widget.card-clock
+  overflow hidden !important
+  border-radius 8px!important
+
+.item-headline
+  font-family 'SAOUI'!important
+  color rgba(60, 60, 61,0.7)!important
+  font-weight bold
+  position absolute
+  z-index 4
+  height 27px
+  width 65%
+  top -27px
+  left 7px
+  i
+    position relative
+    top 0px
+    margin-left 5%
+    z-index 2
+  span
+    position relative
+    top 0px
+    z-index 2
+  a
+    position relative
+    top 0px
+    z-index 2
+  &:after
+    content ''
+    position absolute
+    top -3px
+    right 0
+    bottom 0
+    left -3px
+    z-index 1
+    background rgba(255, 255, 255, 0.9)
+    border 1px solid rgba(255, 255, 255, 0.9)
+    border-bottom 0 solid #fff
+    transform perspective(20px) rotateX(3deg)
+    border-top-right-radius 5px!important
+    border-top-left-radius 5px!important
+  &:before
+    display: block;
+    width: 140%;
+    // margin-left: -10%;
+    margin-top: 2px;
+    height: 2px;
+    content: '';
+    background: rgba(160, 159, 160,0.9);
+    border-radius: 5px;
+    top 40px
+    left 0
+    position: relative;
+
+@media screen and (max-width: 800px)
+  .item-headline
+    left 8px
+[data-theme="dark"]
+  .card-widget:not(.card-info)
+    color rgba(255, 255, 255,0.7)!important
+  .item-headline
+    color rgba(255, 255, 255,0.7)!important
+    &:after
+      background rgba(0, 0, 0, 0.5)
+      border 1px solid rgba(0, 0, 0, 0.5)
+      border-bottom 0 solid rgba(0, 0, 0, 0.5)
+    &:before
+      background: rgba(255, 255, 255,0.9);

@@ -1,0 +1,45 @@
+if theme.aside.card_author.enable
+  .card-widget.card-info
+    .cols
+      .col(ontouchstart="this.classList.toggle('hover');")
+        .container
+          .front
+            .inner
+              img(src='https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@bf_3.6.2_1/assets/info.png' style='width:150px')
+          .back
+            .inner
+              img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
+              .player-name= config.author
+              .attributes-value
+                if site.posts.length
+                  .attributes-value-item
+                    a(href=url_for(config.archive_dir) + '/')
+                      .attributes= _p('aside.articles') 
+                      .value-nar= site.posts.length
+
+                if site.tags.length
+                  .attributes-value-item
+                    a(href=url_for(config.tag_dir) + '/')
+                      .attributes= _p('aside.tags')
+                      .value-nar= site.tags.length
+
+                if site.categories.length
+                  .attributes-value-item
+                    a(href=url_for(config.category_dir) + '/')
+                      .attributes= _p('aside.categories') 
+                      .value-nar= site.categories.length
+
+      .col(ontouchstart="this.classList.toggle('hover');")
+        .container
+          .front
+            .inner
+              .player_description!= theme.aside.card_author.description || config.description
+          .back
+            .inner
+              if theme.aside.card_author.button.enable
+                a.attributes-bar-button(href=theme.aside.card_author.button.link)
+                  i(class=theme.aside.card_author.button.icon)
+                  span=theme.aside.card_author.button.text
+              if(theme.social)
+                  .card-info-social-icons.is-center
+                    !=fragment_cache('social', function(){return partial('includes/header/social')}) 

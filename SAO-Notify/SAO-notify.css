@@ -36,7 +36,7 @@
 .notify-alert {
   background: rgba(220, 220, 220, 0.8);
   color: rgba(60, 60, 61, 0.7);
-  height: 125px;
+  height: 120px;
   overflow: scroll;
   width: 100%;
   display: block;
@@ -47,13 +47,13 @@
 
 .notify-button {
   background: rgba(249, 249, 249, 0.8);
-  height: 55px;
+  height: 60px;
   width: 100%;
   display: block;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-top: 10px
+  padding-top: 12.5px
 }
 
 .notify-confirm {

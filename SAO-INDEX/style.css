@@ -5,6 +5,7 @@ body{
   width: 800px;
   background: red;
   overflow: hidden;
+  border-radius: 15px;
 }
 #over-box::before{
   content: "";
@@ -12,9 +13,9 @@ body{
   height: 0;
   background: transparent;
   position: absolute;
-  top: 97px;
+  top: 90px;
   z-index: 2;
-  left: 54px;
+  left: 45px;
   border-top: 10px solid transparent;
   border-left: 6px solid #73b8f4;
   border-bottom: 10px solid transparent;
@@ -34,9 +35,12 @@ body{
 .description{
   width: 40%;
   height: 200px;
-  background: #ffffff;
+  background: #e5eff0;
   position: relative;
   left: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px 20px 60px;
 }
 .description::before{
   content: "";
@@ -44,21 +48,14 @@ body{
   height: 0;
   background: transparent;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: -59px;
   border-top: 100px solid transparent;
-  border-left: 60px solid #ffffff;
+  border-left: 60px solid #e5eff0;
   border-bottom: 100px solid transparent;
 }
-
-.post-info{
-  width: 60%;
-  height: 200px;
-  position: relative;
-  background: #ff00ff;
-}
-.post-info::before{
+.description::after{
   content: "";
   width: 0;
   height: 0;
@@ -66,16 +63,53 @@ body{
   position: absolute;
   z-index: 1;
   top: 0;
-  right: -59px;
+  right: -60px;
   border-top: 100px solid transparent;
-  border-left: 60px solid #ff00ff;
+  border-left: 60px solid #000000;
   border-bottom: 100px solid transparent;
+}
+
+.post-info{
+  width: 60%;
+  height: 200px;
+  position: relative;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  flex-direction: column;
+  color: #000000;
+}
+.post-info::before{
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #ffffff, transparent);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 100%;
+}
+
+.post-info .post-title{
+height: 50%;
+padding: 25px 15px 10px 50px;
+    font-size: 24px;
+}
+.post-info .post-tag{
+height: 50%;
+    padding: 0px 20px 5px 60px;
 }
 .cover{
   width: 40%;
   height: 200px;
   position: relative;
   background: #0000ff;
+}
+.cover img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 #over-box:hover .container{
   transform: translateX(28.6%);

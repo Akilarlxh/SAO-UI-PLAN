@@ -1,0 +1,83 @@
+body{
+  background: #000000
+}
+ #over-box{
+  width: 800px;
+  background: red;
+  overflow: hidden;
+}
+#over-box::before{
+  content: "";
+  width: 0;
+  height: 0;
+  background: transparent;
+  position: absolute;
+  top: 97px;
+  z-index: 2;
+  left: 54px;
+  border-top: 10px solid transparent;
+  border-left: 6px solid #73b8f4;
+  border-bottom: 10px solid transparent;
+}
+.container{
+  background: rgb(111, 150, 146);
+  position: relative;
+  left: -40%;
+  height:200px;
+  width:140%;
+  z-index: 0;
+  display:flex;
+  overflow: hidden;
+  border: 0px solid
+}
+
+.description{
+  width: 40%;
+  height: 200px;
+  background: #ffffff;
+  position: relative;
+  left: 0;
+}
+.description::before{
+  content: "";
+  width: 0;
+  height: 0;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -59px;
+  border-top: 100px solid transparent;
+  border-left: 60px solid #ffffff;
+  border-bottom: 100px solid transparent;
+}
+
+.post-info{
+  width: 60%;
+  height: 200px;
+  position: relative;
+  background: #ff00ff;
+}
+.post-info::before{
+  content: "";
+  width: 0;
+  height: 0;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -59px;
+  border-top: 100px solid transparent;
+  border-left: 60px solid #ff00ff;
+  border-bottom: 100px solid transparent;
+}
+.cover{
+  width: 40%;
+  height: 200px;
+  position: relative;
+  background: #0000ff;
+}
+#over-box:hover .container{
+  transform: translateX(28.6%);
+  transition: all 0.5s
+}

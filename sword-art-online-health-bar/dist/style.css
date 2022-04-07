@@ -1,0 +1,104 @@
+body {
+  height: 100vh;
+  background: #F6F8F8;
+  font-family: "Nova Square", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sao-healthbar {
+  width: 350px;
+  height: 50px;
+  display: flex;
+}
+.sao-healthbar .main-container {
+  height: 50px;
+  width: 350px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-clip-path: polygon(350px 0, 330px 36.5px, 187px 36.5px, 187px 51px, 0 51px, 0 0);
+          clip-path: polygon(350px 0, 330px 36.5px, 187px 36.5px, 187px 51px, 0 51px, 0 0);
+  display: flex;
+  align-items: center;
+}
+.sao-healthbar .main-container .character-name {
+  width: 60px;
+  color: #FFF;
+  text-align: center;
+}
+.sao-healthbar .main-container .health-bar--outline {
+  width: 274px;
+  height: 34px;
+  background: #FFF;
+  -webkit-clip-path: polygon(262px 20.55px, 122.5px 20.55px, 113.5px 35px, 0 35px, 0 0, 274px 0);
+          clip-path: polygon(262px 20.55px, 122.5px 20.55px, 113.5px 35px, 0 35px, 0 0, 274px 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sao-healthbar .main-container .health-bar--outline .health-bar--border {
+  width: 272px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-clip-path: polygon(260px 18px, 120px 18px, 110px 35px, 0 35px, 0 0, 271px 0);
+          clip-path: polygon(260px 18px, 120px 18px, 110px 35px, 0 35px, 0 0, 271px 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sao-healthbar .main-container .health-bar--outline .health-bar--border .health-bar--background {
+  width: 268px;
+  height: 28px;
+  background: #FFF;
+  -webkit-clip-path: polygon(256px 14px, 116.5px 14px, 103.5px 35px, 0 35px, 0 0, 265px 0);
+          clip-path: polygon(256px 14px, 116.5px 14px, 103.5px 35px, 0 35px, 0 0, 265px 0);
+}
+.sao-healthbar .main-container .health-bar--outline .health-bar--border .health-bar--background .health-bar--health {
+  --health: 1;
+  --max-health: 1;
+  width: calc(var(--health) / var(--max-health) * 100%);
+  height: 28px;
+  background: linear-gradient(to right, #71af1b 0%, #94c94f 90%,transparent 100%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 102%, calc(100% - 18px) 102%);
+          clip-path: polygon(100% 0, 0 0, 0 102%, calc(100% - 18px) 102%);
+}
+.sao-healthbar .health-indicator {
+  --health: "0";
+  --max-health: "0";
+  width: 90px;
+  height: 26px;
+  margin: 38px 0 0 189px;
+  padding-right: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px 0 0 3px;
+  color: #FFF;
+  font-size: 0.8em;
+  line-height: 26px;
+  text-align: right;
+  position: absolute;
+}
+.sao-healthbar .health-indicator:before {
+  content: var(--health);
+  margin-right: 5px;
+}
+.sao-healthbar .health-indicator:after {
+  content: var(--max-health);
+  margin-left: 5px;
+}
+.sao-healthbar .character-level {
+  --level: "1";
+  width: 40px;
+  height: 26px;
+  margin: 38px 0 0 291px;
+  padding-left: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 3px 3px 0;
+  color: #FFF;
+  font-size: 0.8em;
+  line-height: 26px;
+  position: absolute;
+}
+.sao-healthbar .character-level:after {
+  content: var(--level);
+  margin-left: 5px;
+}

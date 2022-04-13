@@ -1,0 +1,95 @@
+body
+  background: black
+.menu-container
+  background: transparent
+  position: fixed
+  top: -50px
+  left: 0
+  height: auto
+  width: 100vw
+  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+  &:hover
+    top 0 !important
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+    button.active-button
+      background rgb(235, 82, 34) !important
+  .menu-item
+    background: rgb(55, 224, 214)
+    height: 50px
+    width 100%
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    &::-webkit-scrollbar
+      display: none
+    .menu-item-main
+      display: inline-flex;
+      width: auto
+      min-width: 80px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      &:hover
+        .menu-item-parent
+          width: 0
+          opacity 0
+          pointer-events: none;
+          transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+        .menu-item-child
+          width: 80px;
+          opacity 1
+          pointer-events: inherit;
+          transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+
+      .menu-item-parent
+        background rgb(178, 98, 219)
+        opacity: 1
+        pointer-events: inherit
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width 80px
+        height: 50px;
+        transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+      .menu-item-child
+        background rgb(108, 151, 228)
+        opacity: 0
+        pointer-events: none
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width 0
+        height: 50px;
+        transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+  .top-bar
+    background: #dee3ed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    clip-path: polygon(0 0, 3px calc(100% - 15px), 10px calc(100% - 10px), calc(50% - 40px) calc(100% - 10px), calc(50% - 35px) 100%, calc(50% + 35px) 100%, calc(50% + 40px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 3px) calc(100% - 15px), 100% 0);
+    .message-container
+      display: flex;
+      flex-wrap: nowrap;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      flex-direction: row;
+      .message-item
+        display: inline-flex
+        justify-content: center
+        height: 50px
+        align-items: center;
+      .message-weather
+        width 25%
+      .message-date
+        width 50%
+      .message-function
+        width 25%
+    button.active-button
+      background: rgb(40, 185, 230);
+      width: 50px;
+      height: 4px;
+      border-radius: 1px;
+      margin: 3px auto;

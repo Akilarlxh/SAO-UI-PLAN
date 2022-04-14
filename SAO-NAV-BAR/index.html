@@ -2,36 +2,46 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6/css/all.min.css">
   <link rel="stylesheet" href="https://npm.elemecdn.com/akilar-blog@1.0.4/css/index.css">
+  <link rel="stylesheet" href="https://widget.heweather.net/simple/static/css/he-simple.css?v=1.4.0">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <div class="menu-container">
     <div class="menu-item">
-      <div class="menu-item-main">一级菜单</div>
-      <div class="menu-item-main">一级菜单</div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
       <div class="menu-item-main has-child">
-        <div class="menu-item-parent">含子分类</div>
-        <div class="menu-item-child">二级菜单</div>
-        <div class="menu-item-child">二级菜单</div>
-        <div class="menu-item-child">二级菜单</div>
-        <div class="menu-item-child">二级菜单</div>
+        <div class="menu-item-parent"><i class="fa-solid fa-blog">Blog</i></div>
+        <div class="menu-item-child"><i class="fa-solid fa-blog">Blog</i></div>
+        <div class="menu-item-child"><i class="fa-solid fa-blog">Blog</i></div>
+        <div class="menu-item-child"><i class="fa-solid fa-blog">Blog</i></div>
+        <div class="menu-item-child"><i class="fa-solid fa-blog">Blog</i></div>
       </div>
-      <div class="menu-item-main">一级菜单</div>
-      <div class="menu-item-main">一级菜单</div>
-      <div class="menu-item-main">一级菜单</div>
-      <div class="menu-item-main">一级菜单</div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
+      <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
     </div>
     <div class="top-bar">
       <div class="message-container">
-        <div class="message-item message-weather">天气 晴 13℃</div>
-        <div class="message-item message-date">14:00  星期五</div>
-        <div class="message-item message-function">搜索  夜间</div>
+        <div class="message-item message-weather">
+          <div id="he-plugin-simple" class="message-weather-box"></div>
+        </div>
+        <div class="message-item message-date">
+          <div id="message-date-box" class="message-date-box"></div>
+        </div>
+        <div class="message-item message-function">
+          <div id="search-button"><a class="site-page social-icon search faa-parent animated-hover" data-pjax-state=""><i class="fas fa-search fa-fw faa-tada"></i></a></div>
+          <i class="fa-solid fa-moon"></i>
+        </div>
       </div>
-      <button class="active-button"></button>
     </div>
+    <button class="active-button"></button>
   </div>
-<script src="./script.js">
-
+<script src="./script.js"></script>
+<script>
+  WIDGET = {"CONFIG":{"modules":"012","background":"5","tmpColor":"FFFFFF","tmpSize":"16","cityColor":"FFFFFF","citySize":"16","aqiColor":"FFFFFF","aqiSize":"16","weatherIconSize":"24","alertIconSize":"18","padding":"10px 10px 10px 10px","shadow":"0","language":"auto","fixed":"false","vertical":"top","horizontal":"left","key":"3da94e567f5e4e88baf90f066f0893c2"}}
 </script>
+<script defer src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0"></script>
 </body>

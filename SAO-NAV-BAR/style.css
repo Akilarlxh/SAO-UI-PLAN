@@ -4,7 +4,7 @@ body {
 .menu-container {
   background: transparent;
   position: fixed;
-  top: -50px;
+  top: -60px;
   left: 0;
   height: auto;
   width: 100vw;
@@ -18,23 +18,33 @@ body {
   background: #eb5222 !important;
 }
 .menu-container .menu-item {
-  background: #37e0d6;
-  height: 50px;
+  background: rgba(66,66,66,0.7);
+  height: 60px;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  text-align: center;
 }
 .menu-container .menu-item::-webkit-scrollbar {
   display: none;
 }
 .menu-container .menu-item .menu-item-main {
   display: inline-flex;
+  background: #d54cc7;
   width: auto;
   min-width: 80px;
   height: 50px;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
+  margin: 5px 5px;
+  clip-path: polygon(3px 0, calc(50% - 5px) 0, 50% 0px, calc(50% + 5px) 0, calc(100% - 3px) 0, 100% 3px, 100% calc(50% - 5px), 100% 50%, 100% calc(50% + 5px), 100% calc(100% - 3px), calc(100% - 3px) 100%, calc(50% + 5px) 100%, 50% 100%, calc(50% - 5px) 100%, 3px 100%, 0 calc(100% - 3px), 0 calc(50% + 5px), 0px 50%, 0 calc(50% - 5px), 0 3px);
+  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
+}
+.menu-container .menu-item .menu-item-main:hover {
+  clip-path: polygon(3px 0, calc(50% - 5px) 0, 50% 8px, calc(50% + 5px) 0, calc(100% - 3px) 0, 100% 3px, 100% calc(50% - 5px), calc(100% - 8px) 50%, 100% calc(50% + 5px), 100% calc(100% - 3px), calc(100% - 3px) 100%, calc(50% + 5px) 100%, 50% calc(100% - 8px), calc(50% - 5px) 100%, 3px 100%, 0 calc(100% - 3px), 0 calc(50% + 5px), 8px 50%, 0 calc(50% - 5px), 0 3px);
+  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
 }
 .menu-container .menu-item .menu-item-main:hover .menu-item-parent {
   width: 0;
@@ -72,12 +82,12 @@ body {
 }
 .menu-container .top-bar {
   background: #dee3ed;
-  height: 60px;
+  height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  clip-path: polygon(0 0, 3px calc(100% - 15px), 10px calc(100% - 10px), calc(50% - 40px) calc(100% - 10px), calc(50% - 35px) 100%, calc(50% + 35px) 100%, calc(50% + 40px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 3px) calc(100% - 15px), 100% 0);
+  border-radius: 0 0 10px 10px;
 }
 .menu-container .top-bar .message-container {
   display: flex;
@@ -96,16 +106,30 @@ body {
 .menu-container .top-bar .message-container .message-weather {
   width: 25%;
 }
+.menu-container .top-bar .message-container .message-weather .s-sticker-tmp.module {
+  color: #000 !important;
+}
+.menu-container .top-bar .message-container .message-weather .s-sticker-city.module {
+  color: #000 !important;
+}
 .menu-container .top-bar .message-container .message-date {
   width: 50%;
 }
 .menu-container .top-bar .message-container .message-function {
+  justify-content: space-evenly;
   width: 25%;
 }
-.menu-container .top-bar button.active-button {
+.menu-container button.active-button {
   background: #28b9e6;
-  width: 50px;
-  height: 4px;
+  width: 70px;
+  height: 10px;
   border-radius: 1px;
-  margin: 3px auto;
+  margin: 0px auto;
+  border-bottom: 3px solid #dee3ed;
+  border-top: 3px solid #dee3ed;
+  border-left: 10px solid #dee3ed;
+  border-right: 10px solid #dee3ed;
+  transform: perspective(0.5em) rotateX(-5deg);
+  left: calc(50% - 35px);
+  position: absolute;
 }

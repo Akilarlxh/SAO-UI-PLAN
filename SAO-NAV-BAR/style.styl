@@ -8,7 +8,7 @@ body
   height: auto
   width: 100vw
   transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-  &:hover
+  &.active-menu-bar
     top 0 !important
     transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
     button.active-button
@@ -89,7 +89,6 @@ body
     align-items: center;
     flex-direction: column;
     border-radius 0 0 10px 10px
-    // clip-path: polygon(0 0, 3px calc(100% - 15px), 10px calc(100% - 10px), calc(50% - 40px) calc(100% - 10px), calc(50% - 35px) 100%, calc(50% + 35px) 100%, calc(50% + 40px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 3px) calc(100% - 15px), 100% 0);
     .message-container
       display: flex;
       flex-wrap: nowrap;
@@ -110,6 +109,37 @@ body
           color: black!important;
       .message-date
         width 50%
+        .message-date-box
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width 50%
+          height: 50px
+          position absolute
+          background #dee3ed
+          transform rotateY(0deg)
+          transition: transform 0.5s ease-in-out;
+          z-index: 2;
+        .message-title-box
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width 50%
+          height: 50px
+          position absolute
+          background #dee3ed
+          transform rotateY(-180deg)
+          transition: transform 0.5s ease-in-out;
+          z-index: 1;
+        &:hover
+          .message-date-box
+            transform rotateY(180deg)
+            z-index 1
+            transition: transform 0.5s ease-in-out;
+          .message-title-box
+            transform rotateY(0deg)
+            z-index 2
+            transition: transform 0.5s ease-in-out;
       .message-function
         justify-content: space-evenly;
         width 25%
@@ -126,6 +156,8 @@ body
     transform: perspective(0.5em) rotateX(-5deg);
     left: calc(50% - 35px);
     position: absolute;
+    &:hover
+      background rgb(235, 82, 34) !important
 @media screen and (max-width: 768px)
   .menu-container
     .top-bar

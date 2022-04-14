@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="menu-container">
+  <div id="menu-container" class="menu-container">
     <div class="menu-item">
       <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
       <div class="menu-item-main"><i class="fa-solid fa-blog">Blog</i></div>
@@ -28,8 +28,9 @@
         <div class="message-item message-weather">
           <div id="he-plugin-simple" class="message-weather-box"></div>
         </div>
-        <div class="message-item message-date">
+        <div class="message-item message-date" onclick="Navvisible()">
           <div id="message-date-box" class="message-date-box"></div>
+          <div id="message-title-box" class="message-title-box">欢迎光临糖果屋</div>
         </div>
         <div class="message-item message-function">
           <div id="search-button"><a class="site-page social-icon search faa-parent animated-hover" data-pjax-state=""><i class="fas fa-search fa-fw faa-tada"></i></a></div>
@@ -37,7 +38,7 @@
         </div>
       </div>
     </div>
-    <button class="active-button"></button>
+    <button class="active-button" onclick="Navvisible()"></button>
   </div>
 <script src="./script.js"></script>
 <script>

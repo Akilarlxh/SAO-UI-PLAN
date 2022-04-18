@@ -42,3 +42,25 @@ function cancelNotify(){
   }, 1e3);
 
 }
+
+
+@Akilar | akilar.top js
+//引用到评论
+rm.rightMenuCommentText = function(txt){
+  rm.hideRightMenu();
+  var input = document.getElementsByClassName('el-textarea__inner')[0];
+  let evt = document.createEvent('HTMLEvents');
+  evt.initEvent('input', true, true);
+  let inputValue = replaceAll(txt,'\n','\n> ')
+  input.value = '> ' + inputValue + '\n\n';
+  input.dispatchEvent(evt);
+  var domTop = document.querySelector("#post-comment").offsetTop;
+  window.scrollTo(0,domTop - 80);
+  input.focus();
+  input.setSelectionRange(-1,-1);
+}
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}

@@ -2,7 +2,7 @@
 .reference a {
   transition: all 0.5s linear;
   display: inline-block;
-  color: #f2b94b;
+  color: #235dac;
   font-weight: bold;
 }
 
@@ -16,7 +16,6 @@
   transition: all 0.5s linear;
   display: flex;
   position: absolute;
-  background: antiquewhite;
   transform: translate(-40px, 10px);
   width: auto;
   height: auto;
@@ -51,17 +50,47 @@
 .reference:hover+.reference-bubble {
   display: inline-block;
 }
-
+.reference-source {
+  font-size: 16px;
+  height: auto;
+  line-height: 26px;
+  width: fit-content;
+  margin: 5px 0;
+  max-width: 90%;
+  background: #f1f1ef;
+  box-shadow: 2px 1px 4px grey;
+  border-radius: 5px;
+  padding-right: 10px;
+}
 a.reference-anchor {
-  color: #318efd;
-  margin-right: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  color: #f1f1ef;
+  background: #183153;
+  height: 30px;
+  display: inline-block;
+  width: fit-content;
+  padding: 0px 0px 0px 10px;
 }
 a.reference-anchor:hover {
-  color: #f2b94b;
+  color: #f1f1ef;
 }
 a.reference-link {
     color:#403e3b;
+    padding: 0px 10px;
 }
 a.reference-link:hover {
-    color: rgb(170, 50, 219);
+    color: #235dac;
+}
+.reference-anchor-up{
+
+    color: #fff;
+    height: 30px;
+    width: 40px;
+    padding: 0px 0px 0px 10px;
+    background: #318efd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0,10px 50%,0 100%,100% 100%,100% 0);
 }

@@ -6,5 +6,25 @@
 </head>
 
 <body>
+<script src="https://npm.elemecdn.com/akilar-candyassets/js/SAO-Notify.js" async></script>
+<script type="text/javascript">
+  const response = fetch('https://api.github.com/repos/akilarlxh/Hexo-blog-source/commits', {
+  headers: {
+    Authorization: `token mytokenhere`,
+  },
+}).then(res => res.json().then(json =>{
+      var commitjson = json;
+      var maxcommit = 4;
+      for(var i=0;i<maxcommit;i++){
+        var item= commitjson[i];
+        var commitmessage = (i+1) + '.' + commitjson[i].commit.message;
+        if (i<1){var commitmessagegroup = commitmessage}
+        else{var commitmessagegroup = commitmessagegroup +'<br>'+ commitmessage}
+      }
+      SAONotify("Latest Update",commitmessagegroup);
 
+    })).catch(console.error);
+
+
+</script>
 </body>

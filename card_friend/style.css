@@ -1,0 +1,36 @@
+a.card-friend-item {
+    height: 60px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+a.card-friend-item:hover {
+  background-color: #e1e1e1;
+}
+img.card-friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.card-friend-details {
+    width: 170px;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.card-friend-name {
+    color: #000;
+}
+.card-friend-descr {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 170px;
+    color: #797979;
+}

@@ -1,67 +1,149 @@
-.card-content {
-  display: flex;
-  background: yellow;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  height: 200px;
-  width: 90%;
-  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
-  margin: 0px 5% 20px 5%;
-}
+@media screen and (min-width:768px){
+  .card-content {
+    display: flex;
+    background: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 90%;
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
+    margin: 0px 5% 20px 5%;
+  }
 
-.card-cover {
-  display: flex;
-  background: red;
-  height: 200px;
-  width: 40%;
-  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-}
-.card-cover img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+  .card-cover {
+    display: flex;
+    background: red;
+    height: 200px;
+    width: 40%;
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+  }
+  .card-cover img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.card-title {
-  display: flex;
-  background: yellow;
-  height: 200px;
-  width: 40%;
-  flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.card-descr {
-  display: flex;
-  background: blue;
-  height: 200px;
-  width: 20%;
-  clip-path: polygon(0 50%, 80px 0, 100% 0, 100% 100%, 80px 100%);
-  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
-  flex-direction: row;
-  align-items: center;
+  .card-title {
+    display: flex;
+    background: aliceblue;
+    height: 200px;
+    width: 40%;
+    flex-direction: column;
   justify-content: center;
-}
+  align-items: center;
+  }
 
+  .card-descr {
+    display: flex;
+    background: #49b1f5;
+    height: 200px;
+    width: 20%;
+    clip-path: polygon(0 50%, 80px 0, 100% 0, 100% 100%, 80px 100%);
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-arrow {
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 10px;
+    background: white;
+    left: calc(100% - 40px);
+    top: calc(50% - 10px);
+    clip-path: polygon(0 10px, 10px 0, 10px 20px);
+  }
+
+  .card-content:hover .card-cover {
+    width: 10%;
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+  }
+
+  .card-content:hover .card-descr {
+    width: 50%;
+    transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+  }
+}
+@media screen and (max-width:768px){
+div#card-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  .card-content {
+      display: flex;
+      position: relative;
+      height: 350px;
+      width: 300px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      background: aliceblue;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0px 20px 20px 20px;
+  }
+  .card-cover {
+      width: 300px;
+      height: 200px;
+      clip-path: polygon(0 130px,0 0,100% 0,100% 130px,50% 100%);
+  }
+  .card-cover img {
+      height: 200px;
+      width: 300px;
+      object-fit: cover;
+
+  }
+  .card-title {
+      height: 150px;
+      width: 300px;
+      background: aliceblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+          padding: 10px 20px 10px 20px;
+  }
+  .card-descr {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(transparent,#666666);
+    clip-path: polygon(0 130px,0 0,100% 0,100% 130px,50% 100%);
+    color: white;
+    text-shadow: 1px 1px black;
+}
 .card-arrow {
-  display: block;
-  position: absolute;
-  height: 20px;
-  width: 10px;
-  background: white;
-  left: calc(100% - 40px);
-  top: calc(50% - 10px);
-  clip-path: polygon(0 10px, 10px 0, 10px 20px);
+    display: block;
+    background: #77b5f2;
+    position: absolute;
+    height: 10px;
+    width: 20px;
+    clip-path: polygon(0 0,100% 0,50% 100%);
+    top: 20px;
+}
+.article-title-link {
+    font-size: 25px;
+    color: #797979;
+}
+.article-meta-wrap {
+  font-size: 12px;
+color: #a2a2a2;
+}
+.article-content-text::before {
+    content: "\"";
+    font-size: 29px;
 }
 
-.card-content:hover .card-cover {
-  width: 10%;
-  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
+.article-content-text::after {
+    content: "\"";
+    font-size: 29px;
 }
 
-.card-content:hover .card-descr {
-  width: 50%;
-  transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
 }
